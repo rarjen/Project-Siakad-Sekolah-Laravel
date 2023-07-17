@@ -65,7 +65,7 @@
 							<h5 class="modal-title" id="exampleModalLabel">Sure you drop all data?</h5>
 						</div>
 						<div class="modal-footer">
-							<button type="button" class="btn btn-secondary" data-dismiss="modal">Cencel</button>
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
 							<button type="submit" class="btn btn-danger">Drop</button>
 						</div>
 					</div>

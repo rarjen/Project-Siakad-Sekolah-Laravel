@@ -1,4 +1,4 @@
-@extends('template_backend.home')
+com@extends('template_backend.home')
 @section('heading', 'Deskripsi Nilai')
 @section('page')
   <li class="breadcrumb-item active">Deskripsi Nilai</li>

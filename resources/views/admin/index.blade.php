@@ -161,14 +161,15 @@
                         </div>
                         <div class="col-md-4">
                             <ul class="chart-legend clearfix">
-                                <li><i class="far fa-circle" style="color: #d4c148"></i> Bisnis kontruksi dan Properti</li>
-                                <li><i class="far fa-circle" style="color: #ba6906"></i> Desain Permodelan dan Informasi Bangunan</li>
-                                <li><i class="far fa-circle" style="color: #ff990a"></i> Elektronika Industri</li>
-                                <li><i class="far fa-circle" style="color: #00a352"></i> Otomasi Industri</li>
-                                <li><i class="far fa-circle" style="color: #2cabe6"></i> Teknik dan Bisnis Sepeda Motor</li>
-                                <li><i class="far fa-circle" style="color: #999999"></i> Rekayasa Perangkat Lunak</li>
-                                <li><i class="far fa-circle" style="color: #0b2e75"></i> Teknik Pemesinan</li>
-                                <li><i class="far fa-circle" style="color: #7980f7"></i> Teknik Pengelasan</li>
+                                <li><i class="far fa-circle" style="color: #d4c148"></i> tes 1</li>
+                                <li><i class="far fa-circle" style="color: #ba6906"></i> tes 2</li>
+                                <li><i class="far fa-circle" style="color: #ff990a"></i> tes 3</li>
+                                <li><i class="far fa-circle" style="color: #00a352"></i> tes 4</li>
+                                <li><i class="far fa-circle" style="color: #2cabe6"></i> tes 5</li>
+                                <li><i class="far fa-circle" style="color: #999999"></i> tes 6</li>
+                                <li><i class="far fa-circle" style="color: #0b2e75"></i> tes 7</li>
+                                <li><i class="far fa-circle" style="color: #7980f7"></i> tes 8</li>
+                                <li><i class="far fa-circle" style="color: #7980f7"></i> tes 9</li>
                             </ul>
                         </div>
                     </div>

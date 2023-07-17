@@ -11,10 +11,11 @@
   <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">
   <link rel="shrotcut icon" href="{{ asset('img/favicon.ico') }}">
 </head>
-<body class="hold-transition login-page" style="background-image: url('{{ asset("img/wallup.jpg") }}'); background-size: cover; background-attachment: fixed;">
+<body class="hold-transition login-page" style="background-image: url('{{ asset("img/background-login.jpg") }}'); background-size: cover; background-attachment: fixed;">
   <div class="login-box">
     <div class="login-logo">
-      <img src="{{ asset('img/logosiakad.png') }}" width="100%" alt="">
+      <h1 style="font-family: cursive; font-size: 46px; color: #ffff; text-align: center;">SMPIT INSAN MADANI</h1>
+      {{-- <img src="{{ asset('img/logosiakad.png') }}" width="100%" alt=""> --}}
     </div>
 
     <div class="login-logo" style="color: white;">
@@ -26,9 +27,9 @@
     </div>
 
     <footer style="color: white;">
-      <marquee>
+      {{-- <marquee>
           <strong>Copyright &copy; <script>document.write(new Date().getFullYear());</script> &diams; <a href="http://smkn1jenpo.sch.id/" style="color: white;">SMK Negeri 1 Jenangan Ponorogo</a>. </strong>
-      </marquee>
+      </marquee> --}}
     </footer>
   </div>
 
@@ -92,7 +93,7 @@
 
 @error('id_card')
   <script>
-    toastr.error("Maaf User ini tidak terdaftar sebagai Guru SMKN 1 Jenangan Ponorogo!");
+    toastr.error("Maaf User ini tidak terdaftar sebagai Guru!");
   </script>
 @enderror
 @error('guru')
@@ -102,7 +103,7 @@
 @enderror
 @error('no_induk')
   <script>
-    toastr.error("Maaf User ini tidak terdaftar sebagai Siswa SMKN 1 Jenangan Ponorogo!");
+    toastr.error("Maaf User ini tidak terdaftar sebagai Siswa!");
   </script>
 @enderror
 @error('siswa')

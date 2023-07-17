@@ -2,8 +2,8 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="" class="brand-link" style="">
-        <img src="{{ asset('img/favicon.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3">
-        <span class="brand-text font-weight-light">SIAKAD</span>
+        <img src="{{ asset('img/KRUSIA.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3">
+        <span class="brand-text font-weight-light">KRUSIA</span>
     </a>
 
     <!-- Sidebar -->
@@ -229,6 +229,12 @@
                                 <a href="{{ route('rapot.index') }}" class="nav-link" id="RapotGuru">
                                     <i class="fas fa-file-alt nav-icon"></i>
                                     <p>Entry Nilai Rapot</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('nilai.index') }}" class="nav-link" id="DesGuru">
+                                    <i class="fas fa-file-alt nav-icon"></i>
+                                    <p>Entry Portofolio</p>
                                 </a>
                             </li>
                             <li class="nav-item">

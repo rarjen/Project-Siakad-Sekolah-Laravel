@@ -49,17 +49,12 @@
                             @if ($mapel->kelompok == 'A')
                                 selected
                             @endif
-                        >Pelajaran Umum</option>
+                        >Kelompok A</option>
                         <option value="B"
                             @if ($mapel->kelompok == 'B')
                                 selected
                             @endif
-                        >Pelajaran Khusus</option>
-                        <option value="C"
-                            @if ($mapel->kelompok == 'C')
-                                selected
-                            @endif
-                        >Pelajaran Keahlian</option>
+                        >Kelompok B</option>
                     </select>
                 </div>
             </div>

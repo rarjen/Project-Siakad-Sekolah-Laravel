@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Auth;
+//use Auth;
+use Illuminate\Support\Facades\Auth;
 use App\User;
 use App\Guru;
 use App\Siswa;

@@ -44,7 +44,7 @@ class MapelController extends Controller
     {
         $this->validate($request, [
             'nama_mapel' => 'required',
-            'paket_id' => 'required',
+            // 'paket_id' => 'required',
             'kelompok' => 'required'
         ]);
 
@@ -54,7 +54,7 @@ class MapelController extends Controller
             ],
             [
                 'nama_mapel' => $request->nama_mapel,
-                'paket_id' => $request->paket_id,
+                // 'paket_id' => $request->paket_id,
                 'kelompok' => $request->kelompok,
             ]
         );

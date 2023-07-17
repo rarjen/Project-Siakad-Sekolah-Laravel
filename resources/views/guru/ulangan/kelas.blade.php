@@ -1,3 +1,4 @@
+{{-- @dd($kelas); --}}
 @extends('template_backend.home')
 @section('heading', 'Entry Nilai Ulangan')
 @section('page')
@@ -34,8 +35,10 @@
                 <tbody>
                   @foreach ($kelas as $val => $data)
                     <tr>
+                      {{-- @dd($data); --}}
                       <td>{{ $loop->iteration }}</td>
                       <td>{{ $data[0]->rapot($val)->nama_kelas }}</td>
+                      {{-- @dd($val); --}}
                       <td><a href="{{ route('ulangan.show', Crypt::encrypt($val)) }}" class="btn btn-primary btn-sm"><i class="nav-icon fas fa-pen"></i> &nbsp; Entry Nilai</a></td>
                     </tr>
                   @endforeach

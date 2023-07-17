@@ -38,5 +38,6 @@ class Siswa extends Model
         return $nilai;
     }
 
+
     protected $table = 'siswa';
 }

@@ -63,6 +63,7 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/sikap', 'SikapController');
     Route::get('/rapot/predikat', 'RapotController@predikat');
     Route::resource('/rapot', 'RapotController');
+    // Route::resource('/portofolio');
   });
 
   Route::middleware(['admin'])->group(function () {
