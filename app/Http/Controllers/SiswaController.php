@@ -92,6 +92,18 @@ class SiswaController extends Controller
         return view('admin.siswa.details', compact('siswa'));
     }
 
+    public function showJson($id) {
+        try {
+            $student = Siswa::findorfail($id);
+            return response()->json([
+                'status' => true,
+                'data' => $student
+            ]);
+        } catch (\Throwable $th) {
+            throw $th;
+        }
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

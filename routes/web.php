@@ -26,6 +26,8 @@ Route::get('/clear-cache', function () {
   return 'DONE';
 });
 
+Route::get('/portofolio/{id}', 'PortController@getSertifikat');
+Route::get('/siswa/show/{id}', 'SiswaController@showJson');
 Auth::routes();
 Route::get('/login/cek_email/json', 'UserController@cek_email');
 Route::get('/login/cek_password/json', 'UserController@cek_password');
@@ -65,6 +67,8 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/rapot', 'RapotController');
     // Route::resource('/portofolio');
     Route::get('/portofolio', 'PortController@index')->name('portofolio.index');
+    Route::post('/portofolio', 'PortController@store');
+    Route::get('/portofolio/delete/{id}', 'PortController@destroy');
   });
 
   Route::middleware(['admin'])->group(function () {
