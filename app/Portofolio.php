@@ -7,9 +7,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Portofolio extends Model
 {
-    use SoftDeletes;
+
+    protected $table = 'portofolio';
 
     protected $fillable = ['siswa_id', 'url', 'deskripsi'];
+    public $timestamps = false;
 
     public function siswa()
     {

@@ -28,7 +28,7 @@ class NilaiController extends Controller
      */
     public function create()
     {
-        $guru = Guru::orderBy('kode')->get();
+        $guru = Guru::orderBy('kode')->join('mapel', 'guru.mapel_id', '=', 'mapel.id')->join('nilai', 'guru.id', '=', 'nilai.guru_id')->get();
         return view('admin.nilai.index', compact('guru'));
     }
 
@@ -41,6 +41,7 @@ class NilaiController extends Controller
     public function store(Request $request)
     {
         $guru = Guru::where('kode', $request->guru_id)->first();
+
 
         Nilai::updateOrCreate(
             [

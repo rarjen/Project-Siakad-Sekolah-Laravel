@@ -232,7 +232,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('nilai.index') }}" class="nav-link" id="DesGuru">
+                                <a href="{{ route('portofolio.index') }}" class="nav-link" id="DesGuru">
                                     <i class="fas fa-file-alt nav-icon"></i>
                                     <p>Entry Portofolio</p>
                                 </a>

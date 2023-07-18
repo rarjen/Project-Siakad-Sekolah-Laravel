@@ -59,50 +59,19 @@ class UlanganController extends Controller
                 $isi = Nilai::where('guru_id', $request->guru_id)->count();
                 if ($isi >= 1) {
                     if ($nilai > 90) {
-                        Rapot::create([
-                            'siswa_id' => $request->siswa_id,
-                            'kelas_id' => $request->kelas_id,
-                            'guru_id' => $request->guru_id,
-                            'mapel_id' => $guru->mapel_id,
-                            'p_nilai' => $nilai,
-                            'p_predikat' => 'A',
-                            'p_deskripsi' => $deskripsi->deskripsi_a,
-                        ]);
+                        $this->checkPredicateValue($request, $guru, 'A', $nilai, $deskripsi->deskripsi_a);
                     } else if ($nilai > 80) {
-                        Rapot::create([
-                            'siswa_id' => $request->siswa_id,
-                            'kelas_id' => $request->kelas_id,
-                            'guru_id' => $request->guru_id,
-                            'mapel_id' => $guru->mapel_id,
-                            'p_nilai' => $nilai,
-                            'p_predikat' => 'B',
-                            'p_deskripsi' => $deskripsi->deskripsi_b,
-                        ]);
+                        $this->checkPredicateValue($request, $guru, 'B', $nilai, $deskripsi->deskripsi_b);
                     } else if ($nilai > 70) {
-                        Rapot::create([
-                            'siswa_id' => $request->siswa_id,
-                            'kelas_id' => $request->kelas_id,
-                            'guru_id' => $request->guru_id,
-                            'mapel_id' => $guru->mapel_id,
-                            'p_nilai' => $nilai,
-                            'p_predikat' => 'C',
-                            'p_deskripsi' => $deskripsi->deskripsi_c,
-                        ]);
+                        $this->checkPredicateValue($request, $guru, 'C', $nilai, $deskripsi->deskripsi_c);
                     } else {
-                        Rapot::create([
-                            'siswa_id' => $request->siswa_id,
-                            'kelas_id' => $request->kelas_id,
-                            'guru_id' => $request->guru_id,
-                            'mapel_id' => $guru->mapel_id,
-                            'p_nilai' => $nilai,
-                            'p_predikat' => 'D',
-                            'p_deskripsi' => $deskripsi->deskripsi_d,
-                        ]);
+                        $this->checkPredicateValue($request, $guru, 'D', $nilai, $deskripsi->deskripsi_d);
                     }
                 } else {
-                    return response()->json(['error' => 'Tolong masukkan deskripsi predikat anda terlebih dahulu!']);
+                    response()->json(['error' => 'Tolong masukkan deskripsi predikat anda terlebih dahulu!']);
                 }
             } else {
+                response()->json(['error' => 'Tolong masukkan nilai ulangan siswa terlebih dahulu!']);
             }
             Ulangan::updateOrCreate(
                 [
@@ -124,6 +93,19 @@ class UlanganController extends Controller
         } else {
             return response()->json(['error' => 'Maaf guru ini tidak mengajar kelas ini!']);
         }
+    }
+
+    public function checkPredicateValue($request, $guru, $predikat, $nilai, $deskripsi)
+    {
+        Rapot::create([
+            'siswa_id' => $request->siswa_id,
+            'kelas_id' => $request->kelas_id,
+            'guru_id' => $request->guru_id,
+            'mapel_id' => $guru->mapel_id,
+            'p_nilai' => $nilai,
+            'p_predikat' => $predikat,
+            'p_deskripsi' => $deskripsi,
+        ]);
     }
 
     /**

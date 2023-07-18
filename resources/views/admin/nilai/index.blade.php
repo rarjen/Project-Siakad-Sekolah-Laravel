@@ -35,13 +35,12 @@
                       <h5 class="card-title">{{ $data->mapel->nama_mapel }}</h5>
                       <p class="card-text"><small class="text-muted">{{ $data->nama_guru }}</small></p>
                   </td>
-                  {{ $data }}
-                  @if ($data->dsk($data->id))
-                    <td>{{ $data->dsk($data->id)->kkm }}</td>
-                    <td>{{ $data->dsk($data->id)->deskripsi_a }}</td>
-                    <td>{{ $data->dsk($data->id)->deskripsi_b }}</td>
-                    <td>{{ $data->dsk($data->id)->deskripsi_c }}</td>
-                    <td>{{ $data->dsk($data->id)->deskripsi_d }}</td>
+                  @if ($data->id)
+                    <td>{{ $data->kkm }}</td>
+                    <td>{{ $data->deskripsi_a }}</td>
+                    <td>{{ $data->deskripsi_b }}</td>
+                    <td>{{ $data->deskripsi_c }}</td>
+                    <td>{{ $data->deskripsi_d }}</td>
                   @else
                     <td></td>
                     <td></td>

@@ -64,6 +64,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/rapot/predikat', 'RapotController@predikat');
     Route::resource('/rapot', 'RapotController');
     // Route::resource('/portofolio');
+    Route::get('/portofolio', 'PortController@index')->name('portofolio.index');
   });
 
   Route::middleware(['admin'])->group(function () {
@@ -131,5 +132,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/rapot-show/{id}', 'RapotController@rapot')->name('rapot-show');
     Route::get('/predikat', 'NilaiController@create')->name('predikat');
     Route::resource('/user', 'UserController');
+
   });
 });
