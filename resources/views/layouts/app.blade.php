@@ -16,7 +16,7 @@
   <div class="login-box">
     <div class="login-logo">
       <img src="{{ asset('img/logo.png') }}" alt="Logo" width="150" height="150">
-      <h1 style="font-family: cursive; font-size: 26px; color: #ffff; text-align: center;">SMPIT INSAN MADANI</h1>
+      <h1 style="font-family: cursive; font-size: 26px; color: #ffff; text-align: center;">SMPIT Insan Madani</h1>
       {{-- <img src="{{ asset('img/logosiakad.png') }}" width="100%" alt=""> --}}
     </div>
 
