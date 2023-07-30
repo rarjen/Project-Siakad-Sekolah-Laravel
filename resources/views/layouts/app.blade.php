@@ -9,15 +9,15 @@
   <link rel="stylesheet" href="{{ asset('plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
   <link rel="stylesheet" href="{{ asset('plugins/toastr/toastr.min.css') }}">
   <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">
-  <link rel="shrotcut icon" href="{{ asset('img/favicon.ico') }}">
+  <link rel="shrotcut icon" href="https://ik.imagekit.io/6v306xm58/KRUSIA.png?updatedAt=1690732404201">
 </head>
 
 <body class="hold-transition login-page" style="background-image: url('{{ asset("img/background-login.jpg") }}'); background-size: cover; background-attachment: fixed;">
   <div class="login-box">
     <div class="login-logo">
-      <img src="{{ asset('img/logo.png') }}" alt="Logo" width="150" height="150">
+      <img src="https://ik.imagekit.io/6v306xm58/logo.png?updatedAt=1690732409580" alt="Logo" width="150" height="150">
       <h1 style="font-family: cursive; font-size: 26px; color: #ffff; text-align: center;">SMPIT Insan Madani</h1>
-      {{-- <img src="{{ asset('img/logosiakad.png') }}" width="100%" alt=""> --}}
+      {{-- <img src="https://ik.imagekit.io/6v306xm58/logo.png?updatedAt=1690732409580" width="100%" alt=""> --}}
     </div>
 
     <div class="login-logo" style="color: white;">
