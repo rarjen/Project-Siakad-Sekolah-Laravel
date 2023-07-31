@@ -9,7 +9,7 @@ use App\Kelas;
 use App\Siswa;
 use App\Mapel;
 use App\User;
-use App\Paket;
+// use App\Paket;
 use App\Pengumuman;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -51,17 +51,17 @@ class HomeController extends Controller
         $siswalk = Siswa::where('jk', 'L')->count();
         $siswapr = Siswa::where('jk', 'P')->count();
         $kelas = Kelas::count();
-        $bkp = Kelas::where('paket_id', '1')->count();
-        $dpib = Kelas::where('paket_id', '2')->count();
-        $ei = Kelas::where('paket_id', '3')->count();
-        $oi = Kelas::where('paket_id', '4')->count();
-        $tbsm = Kelas::where('paket_id', '6')->count();
-        $rpl = Kelas::where('paket_id', '7')->count();
-        $tpm = Kelas::where('paket_id', '5')->count();
-        $las = Kelas::where('paket_id', '8')->count();
+        // $bkp = Kelas::where('paket_id', '1')->count();
+        // $dpib = Kelas::where('paket_id', '2')->count();
+        // $ei = Kelas::where('paket_id', '3')->count();
+        // $oi = Kelas::where('paket_id', '4')->count();
+        // $tbsm = Kelas::where('paket_id', '6')->count();
+        // $rpl = Kelas::where('paket_id', '7')->count();
+        // $tpm = Kelas::where('paket_id', '5')->count();
+        // $las = Kelas::where('paket_id', '8')->count();
         $mapel = Mapel::count();
         $user = User::count();
-        $paket = Paket::all();
+        // $paket = Paket::all();
         return view('admin.index', compact(
             'jadwal',
             'guru',
@@ -71,17 +71,17 @@ class HomeController extends Controller
             'siswapr',
             'siswa',
             'kelas',
-            'bkp',
-            'dpib',
-            'ei',
-            'oi',
-            'tbsm',
-            'rpl',
-            'tpm',
-            'las',
+            // 'bkp',
+            // 'dpib',
+            // 'ei',
+            // 'oi',
+            // 'tbsm',
+            // 'rpl',
+            // 'tpm',
+            // 'las',
             'mapel',
             'user',
-            'paket'
+            // 'paket'
         ));
     }
 }
