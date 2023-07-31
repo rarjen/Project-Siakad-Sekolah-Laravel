@@ -16,7 +16,8 @@ class PortController extends Controller
         return view('guru.portofolio.index', compact('data'));
     }
 
-    public function getSertifikat($id) {
+    public function getSertifikat($id)
+    {
         try {
             $exist = Portofolio::where('siswa_id', $id)->get();
             return response()->json([
@@ -31,15 +32,16 @@ class PortController extends Controller
         }
     }
 
-    public function store(Request $request) {
+    public function store(Request $request)
+    {
         try {
             $file = $request->file('file');
-            $nama_file = time()."_".$file->getClientOriginalName();
+            $nama_file = time() . "_" . $file->getClientOriginalName();
             $tujuan_upload = 'sertifikat';
-            $file->move($tujuan_upload,$nama_file);
+            $file->move($tujuan_upload, $nama_file);
             Portofolio::create([
                 'siswa_id' => $request->siswa_id,
-                'url'   => 'sertifikat/'.$nama_file,
+                'url'   => 'https://api-siakad.jasa-nikah-siri-amanah-profesional.com/sertifikat/' . $nama_file,
                 'deskripsi' => $request->deskripsi,
             ]);
             return redirect()->back()->with('success', 'Data berhasil ditambahkan');
@@ -48,7 +50,8 @@ class PortController extends Controller
         }
     }
 
-    public function destroy($id) {
+    public function destroy($id)
+    {
         try {
             $data = Portofolio::findOrFail($id);
             $data->delete();
@@ -57,5 +60,4 @@ class PortController extends Controller
             return redirect()->back()->with('error', $th->getMessage());
         }
     }
-
 }
