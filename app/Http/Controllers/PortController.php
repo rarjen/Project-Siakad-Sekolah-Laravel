@@ -41,7 +41,7 @@ class PortController extends Controller
             $file->move($tujuan_upload, $nama_file);
             Portofolio::create([
                 'siswa_id' => $request->siswa_id,
-                'url'   => 'https://admin-siakad.jasa-nikah-siri-amanah-profesional.com/sertifikat/' . $nama_file,
+                'url'   => 'sertifikat/' . $nama_file,
                 'deskripsi' => $request->deskripsi,
             ]);
             return redirect()->back()->with('success', 'Data berhasil ditambahkan');
