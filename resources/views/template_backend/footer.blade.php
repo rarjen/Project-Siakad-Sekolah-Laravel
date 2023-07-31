@@ -1,14 +1,14 @@
 <footer class="main-footer">
-        {{-- <marquee>
-            <strong>Copyright &copy; <script>document.write(new Date().getFullYear());</script> &diams; <a href="http://smkn1jenpo.sch.id/">SMK Negeri 1 Jenangan Ponorogo</a>. </strong>
+    {{-- <marquee>
+            <strong>Copyright &copy; <script>document.write(new Date().getFullYear());</script> &diams; <a href="#">Krusia</a>. </strong>
         </marquee> --}}
-    </footer>
+</footer>
 
-    <!-- Control Sidebar -->
-    <aside class="control-sidebar control-sidebar-dark">
-        <!-- Control sidebar content goes here -->
-    </aside>
-    <!-- /.control-sidebar -->
+<!-- Control Sidebar -->
+<aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+</aside>
+<!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
 
@@ -83,7 +83,7 @@
 <script>
     function inputAngka(e) {
         var charCode = (e.which) ? e.which : event.keyCode
-        if (charCode > 31 && (charCode < 48 || charCode > 57)){
+        if (charCode > 31 && (charCode < 48 || charCode > 57)) {
             return false;
         }
         return true;
@@ -91,12 +91,12 @@
 
     function sikap(e) {
         var charCode = (e.which) ? e.which : event.keyCode
-        if (charCode > 31 && (charCode < 49 || charCode > 52)){
+        if (charCode > 31 && (charCode < 49 || charCode > 52)) {
             return false;
         }
         return true;
     }
-    
+
     $(document).on('click', '[data-toggle="lightbox"]', function(event) {
         event.preventDefault();
         $(this).ekkoLightbox({
@@ -104,7 +104,7 @@
         });
     });
 
-    $(function () {
+    $(function() {
         $("#example1").DataTable();
         $('#example2').DataTable({
             "paging": false,
@@ -115,24 +115,28 @@
             "autoWidth": true,
         });
     });
-    
-    $(document).ready(function () {
+
+    $(document).ready(function() {
         bsCustomFileInput.init();
     });
 
-    $(function () {
+    $(function() {
         //Initialize Select2 Elements
         $('.select2').select2()
 
         //Initialize Select2 Elements
         $('.select2bs4').select2({
-        theme: 'bootstrap4'
+            theme: 'bootstrap4'
         })
 
         //Datemask dd/mm/yyyy
-        $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
+        $('#datemask').inputmask('dd/mm/yyyy', {
+            'placeholder': 'dd/mm/yyyy'
+        })
         //Datemask2 mm/dd/yyyy
-        $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
+        $('#datemask2').inputmask('mm/dd/yyyy', {
+            'placeholder': 'mm/dd/yyyy'
+        })
         //Money Euro
         $('[data-mask]').inputmask()
 
@@ -140,36 +144,35 @@
         $('#reservation').daterangepicker()
         //Date range picker with time picker
         $('#reservationtime').daterangepicker({
-        timePicker: true,
-        timePickerIncrement: 30,
-        locale: {
-            format: 'MM/DD/YYYY hh:mm A'
-        }
+            timePicker: true,
+            timePickerIncrement: 30,
+            locale: {
+                format: 'MM/DD/YYYY hh:mm A'
+            }
         })
         //Date range as a button
-        $('#daterange-btn').daterangepicker(
-        {
-            ranges   : {
-            'Today'       : [moment(), moment()],
-            'Yesterday'   : [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-            'Last 7 Days' : [moment().subtract(6, 'days'), moment()],
-            'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-            'This Month'  : [moment().startOf('month'), moment().endOf('month')],
-            'Last Month'  : [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        $('#daterange-btn').daterangepicker({
+                ranges: {
+                    'Today': [moment(), moment()],
+                    'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                    'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                    'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                    'This Month': [moment().startOf('month'), moment().endOf('month')],
+                    'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                },
+                startDate: moment().subtract(29, 'days'),
+                endDate: moment()
             },
-            startDate: moment().subtract(29, 'days'),
-            endDate  : moment()
-        },
-        function (start, end) {
-            $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
-        }
+            function(start, end) {
+                $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
+            }
         )
 
         //Timepicker
         $('#timepicker').datetimepicker({
-        format: 'LT'
+            format: 'LT'
         })
-        
+
         //Bootstrap Duallistbox
         $('.duallistbox').bootstrapDualListbox()
 
@@ -179,11 +182,11 @@
         $('.my-colorpicker2').colorpicker()
 
         $('.my-colorpicker2').on('colorpickerChange', function(event) {
-        $('.my-colorpicker2 .fa-square').css('color', event.color.toString());
+            $('.my-colorpicker2 .fa-square').css('color', event.color.toString());
         });
 
-        $("input[data-bootstrap-switch]").each(function(){
-        $(this).bootstrapSwitch('state', $(this).prop('checked'));
+        $("input[data-bootstrap-switch]").each(function() {
+            $(this).bootstrapSwitch('state', $(this).prop('checked'));
         });
     });
 
@@ -193,8 +196,8 @@
         showConfirmButton: false,
         timer: 3000
     });
-    
-    $(function () {
+
+    $(function() {
         $('.textarea').summernote()
     })
 </script>
@@ -202,32 +205,33 @@
 @yield('script')
 
 @if (count($errors)>0)
-    @foreach ($errors->all() as $error)
-        <script>
-            toastr.error("{{ $error }}");
-        </script>
-    @endforeach
+@foreach ($errors->all() as $error)
+<script>
+    toastr.error("{{ $error }}");
+</script>
+@endforeach
 @endif
 @if (Session::has('success'))
-    <script>
-        toastr.success("{{ Session('success') }}");
-    </script>
+<script>
+    toastr.success("{{ Session('success') }}");
+</script>
 @endif
 @if (Session::has('warning'))
-    <script>
-        toastr.warning("{{ Session('warning') }}");
-    </script>
+<script>
+    toastr.warning("{{ Session('warning') }}");
+</script>
 @endif
 @if (Session::has('info'))
-    <script>
-        toastr.info("{{ Session('info') }}");
-    </script>
+<script>
+    toastr.info("{{ Session('info') }}");
+</script>
 @endif
 @if (Session::has('error'))
-    <script>
-        toastr.error("{{ Session('error') }}");
-    </script>
+<script>
+    toastr.error("{{ Session('error') }}");
+</script>
 @endif
 
 </body>
+
 </html>
