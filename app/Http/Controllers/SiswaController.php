@@ -288,8 +288,14 @@ class SiswaController extends Controller
         $file = $request->file('file');
         $nama_file = rand() . $file->getClientOriginalName();
         $file->move('file_siswa', $nama_file);
-        Excel::import(new SiswaImport, public_path('file_siswa/' . $nama_file));
-        return redirect()->back()->with('success', 'Data Siswa Berhasil Diimport!');
+        try {
+
+            Excel::import(new SiswaImport, public_path('/file_siswa/' . $nama_file));
+            unlink(public_path('/file_siswa/' . $nama_file));
+            return redirect()->back()->with('success', 'Data Siswa Berhasil Diimport!');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Terjadi kesalahan saat mengimport data. Pastikan format file Excel sesuai.');
+        }
     }
 
     public function deleteAll()
