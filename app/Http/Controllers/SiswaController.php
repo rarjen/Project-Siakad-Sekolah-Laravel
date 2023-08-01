@@ -294,7 +294,7 @@ class SiswaController extends Controller
             unlink(public_path('/file_siswa/' . $nama_file));
             return redirect()->back()->with('success', 'Data Siswa Berhasil Diimport!');
         } catch (\Exception $e) {
-            return redirect()->back()->with('error', 'Terjadi kesalahan saat mengimport data. Pastikan format file Excel sesuai.');
+            return redirect()->back()->with('error', 'Terjadi kesalahan saat mengimport data. Pastikan format file Excel sesuai.', $e);
         }
     }
 
