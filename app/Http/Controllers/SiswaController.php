@@ -51,6 +51,8 @@ class SiswaController extends Controller
             'kelas_id' => 'required'
         ]);
 
+        $nameFoto = "";
+
         if ($request->foto) {
             $foto = $request->foto;
             $new_foto = date('siHdmY') . "_" . $foto->getClientOriginalName();
