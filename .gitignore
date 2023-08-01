@@ -12,3 +12,4 @@ npm-debug.log
 yarn-error.log
 /uploads
 public/uploads/siswa/24540701082023_cafe.jpg
+app/Http/Controllers/GuruController.php

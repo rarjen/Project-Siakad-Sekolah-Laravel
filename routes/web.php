@@ -103,7 +103,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/guru/update-foto/{id}', 'GuruController@update_foto')->name('guru.update-foto');
     Route::post('/guru/upload', 'GuruController@upload')->name('guru.upload');
     Route::get('/guru/export_excel', 'GuruController@export_excel')->name('guru.export_excel');
-    Route::post('/guru/import_excel', 'GuruController@import_excel')->name('guru.import_excel');
+    Route::post('guru/import_excel', 'GuruController@import_excel')->name('guru.import_excel');
     Route::delete('/guru/deleteAll', 'GuruController@deleteAll')->name('guru.deleteAll');
     Route::resource('/guru', 'GuruController');
     Route::get('/kelas/edit/json', 'KelasController@getEdit');
@@ -114,7 +114,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/siswa/ubah-foto/{id}', 'SiswaController@ubah_foto')->name('siswa.ubah-foto');
     Route::post('/siswa/update-foto/{id}', 'SiswaController@update_foto')->name('siswa.update-foto');
     Route::get('/siswa/export_excel', 'SiswaController@export_excel')->name('siswa.export_excel');
-    Route::post('/siswa/import_excel', 'SiswaController@import_excel')->name('siswa.import_excel');
+    Route::post('siswa/import_excel', 'SiswaController@import_excel')->name('siswa.import_excel');
     Route::delete('/siswa/deleteAll', 'SiswaController@deleteAll')->name('siswa.deleteAll');
     Route::resource('/siswa', 'SiswaController');
     Route::get('/mapel/getMapelJson', 'MapelController@getMapelJson');
@@ -136,6 +136,5 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/rapot-show/{id}', 'RapotController@rapot')->name('rapot-show');
     Route::get('/predikat', 'NilaiController@create')->name('predikat');
     Route::resource('/user', 'UserController');
-
   });
 });
